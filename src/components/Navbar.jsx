@@ -4,7 +4,7 @@ import { IoSearchOutline } from "react-icons/io5";
 
 const Navbar = () => {
   return( 
-    <nav className="bg-gray-800 w-[100vw] h-[4em] border-b-2 border-white sticky top-0 px-10 flex justify-between items-center z-10">
+    <nav className="bg-gray-800 w-[100vw] h-[4em] border-b-2 border-white sticky top-0 px-1 flex justify-around items-center z-10 md:px-10 md:justify-between">
     <img className="w-14" src={logo}></img>
     <div className="bg-gray-800 border-2 h-9 w-[35em] flex items-center px-2" >
   <IoSearchOutline className="text-white"/>
