@@ -8,12 +8,13 @@ import VideoCard from "./components/VideoCard";
 import Home from "./pages/Home";
 
 function App() {
+const [modal, setModal] =useState(false);
 
   return(
     <>
-    <Navbar/>
+    <Navbar modal={{modal,setModal}}/>
     <div className="flex w-[100vw]">
-    <Home/>
+    <Home modal={{modal,setModal}}/>
     </div>
   
     </>

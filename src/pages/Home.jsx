@@ -2,10 +2,10 @@ import React from 'react'
 import Sidebar from '../components/Sidebar'
 import VideoCard from '../components/VideoCard'
 
-const Home = () => {
+const Home = ({modal}) => {
   return (
     <div className='bg-gray-800 w-[100vw]' >
-       <Sidebar />
+       <Sidebar open={modal}/>
         <div className="pl-[0.4em] mt-4 md:pl-[16.5em]">
         <VideoCard/>
         </div>

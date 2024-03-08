@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { AiOutlineHome,AiOutlineLike } from "react-icons/ai";
 import { LuTimerReset } from "react-icons/lu";
 import { BsCameraVideo } from "react-icons/bs";
@@ -7,10 +7,10 @@ import { RiUserFollowLine } from "react-icons/ri";
 import { IoSettingsOutline } from "react-icons/io5";
 
 
-const Sidebar = () => {
-  return (
+const Sidebar = ({open}) => {
+ return (
     <>
-    <div className=" fixed left-[0em] z-20 bg-gray-800 w-[55vw] h-[119vh]  border-r-2 border-white md:left-[0em] md:w-[17vw] md:h-[100vh]">
+    <div className={`fixed ${open.modal ? "left-0" : "left-[-16.5em]"} transition-all z-20 bg-gray-800 w-[55vw] h-[119vh] border-r-2 border-white md:left-[0em] md:w-[17vw] md:h-[100vh]`}>
     <div className=" flex flex-col items-center text-center gap-[7px] border-x-5 border-red-400 ">
         <div className="flex items-center py-[5px] mt-5 rounded-sm text-white border-2 w-[95%]  gap-4 text-[1.2em] cursor-pointer hover:bg-purple-800 ">
         <AiOutlineHome className='ml-2'/>
