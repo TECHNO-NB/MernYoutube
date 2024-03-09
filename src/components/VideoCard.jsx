@@ -11,7 +11,7 @@ import img5 from "../assets/img5.jpeg";
 
 const VideoCard = () => {
   return (
- <div className="w-[100vw] h-[100%] z-[-4] bg-gray-800 grid grid-cols-1 gap-4 px-4 text-white sm:grid-cols-2 md:grid-cols-4 md:w-[82.5vw] " >
+ <div className="w-[100vw] h-[100%] z-[-4] bg-gray-800  grid grid-cols-1 gap-4 px-2 mr-14 text-white sm:grid-cols-2 md:grid-cols-4 md:w-[82.5vw] " >
 
 <div className="flex flex-col items-center gap-2 w-[100%]  cursor-pointer ">
     <div className="relative">

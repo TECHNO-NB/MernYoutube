@@ -16,7 +16,7 @@ const Sidebar = ({open}) => {
         <AiOutlineHome className='ml-2'/>
         <span>Home</span>
         </div>
-        <div className=" flex items-center py-[5px]  rounded-sm text-white border-2 w-[95%]  gap-4 text-[1.2em] cursor-pointer hover:bg-purple-800 ">
+        <div className=" flex items-center py-[5px] bg-none rounded-sm text-white border-2 w-[95%]  gap-4 text-[1.2em] cursor-pointer hover:bg-purple-800 ">
         <AiOutlineLike className='ml-2'/>
         <span>Liked Videos</span>
         </div>
@@ -51,7 +51,7 @@ const Sidebar = ({open}) => {
         <span >Log in</span>
         </div>
 
-        <div className=" flex items-center py-[5px] text-center justify-center  bg-[#AE7AFF] opacity-100 rounded-sm text-white border-2 w-[95%]  gap-4 text-[1.2em] cursor-pointer hover:bg-purple-800 md:opacity-0 ">
+        <div className="flex items-center py-[5px] text-center justify-center  bg-[#AE7AFF] opacity-100 rounded-sm text-white border-2 w-[95%]  gap-4 text-[1.2em] cursor-pointer hover:bg-purple-800 md:opacity-0 ">
    
         <span >Sign up</span>
         </div>
