@@ -45,7 +45,7 @@ const Sidebar = ({ open }) => {
 
 
  {/* sideBar Bottom Part */}
-       <div className="flex flex-col mt-[165%] items-center gap-2 md:mt-[105%]">
+       <div className="flex flex-col mt-[160%] items-center gap-2 md:mt-[105%]">
           {/* For Pic */}
 
           <div className="hidden  md:flex md:items-center md:w-full md:flex-col md:mt-[20%] ">
