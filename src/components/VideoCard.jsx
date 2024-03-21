@@ -1,19 +1,29 @@
 import React from 'react'
 import thumbnail from "../assets/thumbnail.jpeg"
+import { useNavigate } from 'react-router-dom'
+
 
 
 const VideoCard = () => {
+  const navigate=useNavigate();
+
+  const VideoDetails=()=>{
+     navigate("/videodetails");
+
+     
+  }
+
   return (
  <div className="w-[100vw] h-[100%] z-[-4] bg-gray-800  grid grid-cols-1 gap-4 px-2 mr-24 text-white md:mr-14 sm:grid-cols-2 md:grid-cols-4 md:w-[82.5vw] " >
 
   <div className="flex flex-col items-center gap-2 w-[100%]  cursor-pointer ">
     <div className="relative">
-    <img  className="w-[100%]"src={thumbnail}></img>
+    <img  className="w-[100%]" onClick={VideoDetails} src={thumbnail}></img>
     <p className='absolute bottom-2 right-2 bg-black px-2'>20:45</p>
     </div>
     <div className="w-full">
       <div className="flex gap-2">
-        <img className='w-10 h-10 rounded-[50%]'  src='./src/assets/logo2.jpeg'/>
+        <img className='w-10 h-10 rounded-[50%]'   src='./src/assets/logo2.jpeg'/>
  
      <div className="div">
          <h1 className='text-white text-[1.2em]'>JavaScript Fundamentals:</h1>
