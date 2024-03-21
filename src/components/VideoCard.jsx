@@ -4,7 +4,7 @@ import thumbnail from "../assets/thumbnail.jpeg"
 
 const VideoCard = () => {
   return (
- <div className="w-[100vw] h-[100%] z-[-4] bg-gray-800  grid grid-cols-1 gap-4 px-2 mr-14 text-white sm:grid-cols-2 md:grid-cols-4 md:w-[82.5vw] " >
+ <div className="w-[100vw] h-[100%] z-[-4] bg-gray-800  grid grid-cols-1 gap-4 px-2 mr-18 text-white md:mr-14 sm:grid-cols-2 md:grid-cols-4 md:w-[82.5vw] " >
 
   <div className="flex flex-col items-center gap-2 w-[100%]  cursor-pointer ">
     <div className="relative">
@@ -14,10 +14,9 @@ const VideoCard = () => {
     <div className="w-full">
       <div className="flex gap-2">
         <img className='w-10 h-10 rounded-[50%]'  src='./src/assets/logo2.jpeg'/>
-
-
-        <div className="div">
-            <h1 className='text-white text-[1.2em]'>JavaScript Fundamentals:</h1>
+ 
+     <div className="div">
+         <h1 className='text-white text-[1.2em]'>JavaScript Fundamentals:</h1>
         <p className=' text-gray-200 font-[300]'>10.3k Views · <span>44 minutes ago</span></p>
         <p className=' text-gray-200 font-[400]'>Code Master</p>
         </div>
