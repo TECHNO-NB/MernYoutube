@@ -9,27 +9,27 @@ const VideoPlay = () => {
     <div className="w-full h-full flex items-center px-2 justify-center flex-col">
       {/* video play sections  */}
       <video
-        className="w-[98%]  md:w-[100%] "
+        className="w-[99.5%]  md:w-[100%] "
         src={video}
         autoPlay
         controls
       ></video>
 
       {/* Channels details viwes and like sections */}
-      <div className="w-full  border-2 text-white pb-2">
+      <div className="w-full mt-2 border-2 text-white pb-2">
         {/* head */}
         <div className="flex justify-between px-1 py-2 ">
           <div className="text-[1.5vh]">
-            <h1 className="">JavaScripts Fundamantails:</h1>
+            <h1 className="text-[1.1em]">JavaScripts Fundamantails:</h1>
             <p className="text-gray-200">30,164 Views ·18 hours ago</p>
           </div>
           <div className="flex gap-2">
           <div className="flex h-6">
-         <button  className="bg-blue-400 ml-2 px-2  rounded flex items-center" >{<AiOutlineLike/>} 300</button>
-         <button  className="bg-blue-400 ml-2 px-2 rounded flex items-center" >{<AiOutlineDislike/>} 50</button>
+         <button  className="bg-blue-400 ml-2 px-1  rounded flex items-center" >{<AiOutlineLike/>} 300</button>
+         <button  className="bg-blue-400 ml-2 px-1 rounded flex items-center" >{<AiOutlineDislike/>} 10</button>
           </div>
           <div className="">
-      <button className="bg-white text-black px-2 rounded">Save</button>
+      <button className="bg-white text-black px-1 rounded">Save</button>
           </div>
           </div>
         </div>
