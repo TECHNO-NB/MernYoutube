@@ -1,7 +1,7 @@
 import React from 'react'
 import Sidebar from '../components/Sidebar'
-import VideoPlay from '../components/VideoPlay';
-
+import VideoPlay from '../videoplay/VideoPlay'
+import Comments from '../videoplay/Comments'
 const VideoDetails = () => {
   return (
     <div className='bg-gray-800 w-[100vw]' >
@@ -9,6 +9,10 @@ const VideoDetails = () => {
      <div className="pl-[0.0em] px-0 mt-4 md:pl-[16.8em]">
        <VideoPlay/>
      </div>
+     <div className="pl-[0.4em] px-2 mt-2 md:pl-[16.8em]">
+     <Comments/>
+     </div>
+
    </div>
   )
 }

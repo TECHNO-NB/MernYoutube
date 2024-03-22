@@ -3,6 +3,7 @@ import logo from "../assets/logo.svg";
 import { IoSearchOutline } from "react-icons/io5";
 import { FaBarsStaggered } from "react-icons/fa6";
 import {showhidesidebar} from "../context/GlobalContext"
+import { IoCloseSharp } from "react-icons/io5";
 
 
 const Navbar = () => {
@@ -18,7 +19,12 @@ return(
   <input className="bg-none ml-2 bg-gray-800 font-[40px] h-[100%] w-[100%] text-white placeholder:text-white outline-none" placeholder="Search " type="text"></input>
     </div>
      <div className="flex gap-2  md:gap-6">
-         <FaBarsStaggered onClick={showSideBar} className="block text-white text-2xl md:hidden"/>
+        {
+        open ? 
+        <FaBarsStaggered onClick={showSideBar} className="block text-white text-2xl md:hidden"/>
+        :
+        <IoCloseSharp onClick={showSideBar} className="block text-white text-2xl md:hidden"/>
+        }
       <button className="text-white hidden md:block">Log in</button>
       <button  className="bg-[#AE7AFF] hidden  font-[700] text-black px-4 py-[5px]  border-b border-purple-200 md:block">Sign up</button>
     </div> 
