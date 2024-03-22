@@ -2,10 +2,9 @@ import { useState } from "react";
 import "./App.css";
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 import Navbar from "./components/Navbar";
-
 import VideoDetails from "./pages/VideoDetails";
-
 import Home from "./pages/Home";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
 return(
@@ -15,6 +14,7 @@ return(
     <Routes>
       <Route path="/" element={<Home/>}></Route>
       <Route path="/videodetails" element={<VideoDetails/>}></Route>
+      <Route path="*" element={<NotFoundPage/>}></Route>
     </Routes>
     </BrowserRouter>
     </>
