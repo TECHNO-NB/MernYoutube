@@ -52,7 +52,7 @@ const Sidebar = () => {
 
 
  {/* sideBar Bottom Part */}
-       <div className="flex flex-col mt-[151%] items-center gap-2 md:mt-[105%]">
+       <div className="flex flex-col mt-[145%] items-center gap-2 md:mt-[105%]">
           {/* For Pic */}
 
           <div className="hidden  md:flex md:items-center md:w-full md:flex-col md:mt-[20%] ">

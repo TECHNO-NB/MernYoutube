@@ -9,7 +9,7 @@ const VideoDetails = () => {
      <div className="pl-[0.0em] px-0 mt-4 md:pl-[16.8em]">
        <VideoPlay/>
      </div>
-     <div className="pl-[0.4em] px-2 mt-2 md:pl-[16.8em]">
+     <div className="pl-[0.5em] px-2 mt-0 md:pl-[16.8em]">
      <Comments/>
      </div>
 
