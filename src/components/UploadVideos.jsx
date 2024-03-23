@@ -1,8 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const UploadVideos = () => {
+  const [video, setVideo] = useState(null);
+  const [thumbnail, setThumbnail] = useState(null);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+
+  const navigate=useNavigate();
+
+  const uploadVideo = async (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("video", video);
+    formData.append("thumbnail", thumbnail);
+    formData.append("title", title);
+    formData.append("description", description);
+    
+    const uploadVideoToserver = await axios.post(
+      "/videoupload",
+      formData
+    );
+    setDescription("");
+    setTitle("");
+    setVideo(null);
+    setThumbnail(null);
+    navigate("/");
+    console.log(uploadVideoToserver.data);
+  };
   return (
-    <form>
     <div className="min-h-[80vh]  flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 className="mt-6 text-center text-3xl font-extrabold text-purple-900">
@@ -12,7 +39,11 @@ const UploadVideos = () => {
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-          <form className="space-y-6" action="#" method="POST">
+          <form
+            className="space-y-6"
+            method="POST"
+            onSubmit={(e) => uploadVideo(e)}
+          >
             <div>
               <label
                 htmlFor="video"
@@ -22,9 +53,11 @@ const UploadVideos = () => {
               </label>
               <div className="mt-1">
                 <input
+                  onChange={(e) => setVideo(e.target.files[0])}
                   id="video"
                   name="video"
                   type="file"
+                  accept="video/*"
                   required
                   className="focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-purple-300 rounded-md"
                 />
@@ -40,9 +73,11 @@ const UploadVideos = () => {
               </label>
               <div className="mt-1">
                 <input
+                  onChange={(e) => setThumbnail(e.target.files[0])}
                   id="image"
                   name="image"
                   type="file"
+                  accept="image/*"
                   required
                   className="focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-purple-300 rounded-md"
                 />
@@ -58,6 +93,7 @@ const UploadVideos = () => {
               </label>
               <div className="mt-1">
                 <input
+                  onChange={(e) => setTitle(e.target.value)}
                   id="title"
                   name="title"
                   type="text"
@@ -77,6 +113,7 @@ const UploadVideos = () => {
               </label>
               <div className="mt-1">
                 <textarea
+                  onChange={(e) => setDescription(e.target.value)}
                   id="description"
                   name="description"
                   rows="3"
@@ -97,7 +134,6 @@ const UploadVideos = () => {
         </div>
       </div>
     </div>
-    </form>
   );
 };
 

@@ -5,7 +5,8 @@ export const showhidesidebar = createContext();
 
 const GlobalContext = ({children} ) => {
   const [open, setOpen] = useState(true);
-  return <showhidesidebar.Provider value={{open,setOpen}}>
+  const [videoId, setVideoId] = useState("");
+  return <showhidesidebar.Provider value={{open,setOpen,videoId,setVideoId}}>
     {children}
   </showhidesidebar.Provider>;
 };
